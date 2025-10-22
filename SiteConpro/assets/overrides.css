@@ -1,0 +1,157 @@
+/* Conpro Pro */
+:root {
+  --bg: #e8f2fa;
+  --text: #1b2838;
+  --muted: #4a5568;
+  --brand: #0a7ac2;
+  --brand-dark: #075e97;
+}
+html, body { background: var(--bg) !important; color: var(--text) !important; }
+h1, h2, h3 { color: var(--text); letter-spacing: -0.01em; }
+h1 { font-weight: 700; }
+h2 { border-left: 4px solid var(--brand); padding-left: 10px; }
+p { line-height: 1.8; margin-bottom: 1em; color: var(--text); }
+.small, .muted, .text-muted { color: var(--muted) !important; }
+header, .site-header {
+  background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, #e8f2fa 100%) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  box-shadow: 0 2px 6px rgba(2,6,23,0.04) !important;
+  padding: 8px 0 !important;
+  min-height: 100px !important;
+}
+.brand img { width: 32px; height: 32px; border-radius: 8px; object-fit: contain; }
+.nav, .navbar, nav[role="navigation"] {
+  display: flex; flex-direction: row; align-items: center; justify-content: space-between;
+  flex-wrap: nowrap; gap: 20px; padding: 8px 0;
+}
+nav a { display: inline-block; margin: 0 10px; white-space: nowrap; color: var(--text); }
+nav a:hover { color: var(--brand-dark); text-decoration: none; }
+.card {
+  background: #ffffff !important;
+  border: 1px solid rgba(2,6,23,0.06);
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(2,6,23,0.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(2,6,23,0.10);
+}
+.btn, .button, button, input[type="submit"] {
+  background: var(--brand); color: #fff; border: none; border-radius: 12px; font-weight: 700;
+}
+.btn:hover, .button:hover, button:hover, input[type="submit"]:hover {
+  background: var(--brand-dark);
+  box-shadow: 0 0 10px rgba(10,122,194,0.35);
+}
+@keyframes conproFadeInUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+.hero { animation: conproFadeInUp .5s ease both; background: transparent !important; border-bottom: 1px solid rgba(2,6,23,0.06); }
+.section + .section { box-shadow: 0 -16px 24px rgba(2,6,23,0.06) inset; }
+footer, .site-footer {
+  background: #d8e6f4;
+  border-top: 1px solid rgba(2,6,23,0.10);
+  color: var(--muted);
+}
+footer a { color: var(--brand); }
+
+/* === Conpro Pro merge === */
+/* === Conpro Pro base === */
+:root {
+  --bg: #e8f2fa;
+  --text: #1b2838;
+  --muted: #4a5568;
+  --brand: #0a7ac2;
+  --brand-dark: #075e97;
+}
+html, body { background: var(--bg) !important; color: var(--text) !important; }
+h1, h2, h3 { color: var(--text); letter-spacing: -0.01em; }
+h1 { font-weight: 700; }
+h2 { border-left: 4px solid var(--brand); padding-left: 10px; }
+p { line-height: 1.8; margin-bottom: 1em; color: var(--text); }
+.small, .muted, .text-muted { color: var(--muted) !important; }
+
+/* Header gradient fin */
+header, .site-header {
+  background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, #e8f2fa 100%) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  box-shadow: 0 2px 6px rgba(2,6,23,0.04) !important;
+  padding: 8px 0 !important;
+  min-height: 100px !important;
+}
+
+/* Navigation */
+.nav, .navbar, nav[role="navigation"] {
+  display: flex; flex-direction: row; align-items: center; justify-content: space-between;
+  flex-wrap: nowrap; gap: 18px; padding: 8px 0;
+}
+nav a { display: inline-block; margin: 0 8px; white-space: nowrap; color: var(--text); }
+nav a:hover { color: var(--brand-dark); text-decoration: none; }
+
+/* Brand alignment / gap */
+.brand { display: flex; align-items: center; gap: 8px; }
+.brand img { vertical-align: middle; border-radius: 8px; object-fit: contain; }
+
+/* Logo sizing */
+.brand img {
+  width: 400px !important;
+  height: 160px !important;
+  max-height: 160px !important;
+}
+
+@media (max-width: 640px) {
+  .brand img {
+    width: 40px !important;
+    height: 40px !important;
+    max-height: 40px !important;
+  }
+}
+
+
+/* Cards */
+.card {
+  background: #ffffff !important;
+  border: 1px solid rgba(2,6,23,0.06);
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(2,6,23,0.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(2,6,23,0.10); }
+
+/* Buttons */
+.btn, .button, button, input[type="submit"] {
+  background: var(--brand); color: #fff; border: none; border-radius: 12px; font-weight: 700;
+}
+.btn:hover, .button:hover, button:hover, input[type="submit"]:hover { background: var(--brand-dark); box-shadow: 0 0 10px rgba(10,122,194,0.35); }
+
+/* Footer */
+footer, .site-footer {
+  background: #d8e6f4;
+  border-top: 1px solid rgba(2,6,23,0.10);
+  color: var(--muted);
+}
+footer a { color: var(--brand); }
+
+/* === Force big header logo === */
+header .brand img,
+.site-header .brand img {
+  width: 200px !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+}
+.contact-logo {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.brand span {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--brand);
+}
+
+

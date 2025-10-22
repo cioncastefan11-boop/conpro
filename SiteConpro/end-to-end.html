@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" />
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Management end-to-end în construcții | Conpro Management</title>
+  <meta name="description" content="Coordonare cap-coadă: proiectare, avize, execuție și recepție. Un singur partener responsabil pentru întregul proiect." />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+<link rel="stylesheet" href="../assets/overrides.css"></head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand">
+  <a href="index.html#top">
+    <img src="../assets/logo.png" alt="Conpro Solutions Logo" class="logo-img" />
+  </a>
+</div>
+<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192x192.png">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<link rel="manifest" href="assets/images/site.webmanifest">
+<meta name="theme-color" content="#0b0f19">
+
+
+    <nav>
+      <button class="menuBtn" aria-expanded="false" aria-controls="menu">Meniu</button>
+      <ul id="menu">
+        <li><a href="index.html#servicii">Servicii</a></li>
+        <li><a href="index.html#despre">Despre</a></li>
+        <li><a href="index.html#galerie">Galerie</a></li>
+        <li><a href="index.html#preturi">Prețuri</a></li>
+        <li><a class="cta" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container wrap">
+      <div>
+        <h1>Site Management</h1>
+        <p class="lead">
+          Asigurăm coordonarea eficientă a lucrărilor pe șantier, respectând termenele,
+          calitatea și siguranța — pentru un proiect livrat impecabil, fără întârzieri.
+        </p>
+        <div class="actions">
+          <a class="cta" href="contact.html">Cere ofertă</a>
+          <a class="btn" href="tel:0745667495">📞 0745 667 495</a>
+        </div>
+      </div>
+      <div class="card" style="aspect-ratio:16/10;overflow:hidden;">
+        <img src="assets/images/site-management.png" alt="Coordonare șantier - Site Management"
+             style="width:100%;height:100%;object-fit:cover;border-radius:18px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- DETALII / CARDURI -->
+  <section>
+    <div class="container">
+      <h2>Serviciul nostru de Site Management include:</h2>
+      <div class="grid cols-3">
+        <div class="card feature">
+          <h3>✅ Planificare și organizare</h3>
+          <p>Elaborăm un plan detaliat de execuție, stabilim termene realiste și alocăm resursele necesare fiecărei etape.</p>
+        </div>
+        <div class="card feature">
+          <h3>✅ Coordonare echipe</h3>
+          <p>Supervizăm echipele de lucru și subcontractorii, menținând o comunicare clară și fluxuri eficiente.</p>
+        </div>
+        <div class="card feature">
+          <h3>✅ Gestionare resurse</h3>
+          <p>Optimizăm aprovizionarea și utilizarea materialelor, reducând pierderile și blocajele logistice.</p>
+        </div>
+        <div class="card feature">
+          <h3>✅ Monitorizare progres</h3>
+          <p>Urmărim termenele de execuție și implementăm măsuri corective pentru a evita întârzierile.</p>
+        </div>
+        <div class="card feature">
+          <h3>✅ Siguranță</h3>
+          <p>Aplicăm norme stricte de SSM și verificăm constant echipamentele de protecție și măsurile de securitate.</p>
+        </div>
+        <div class="card feature">
+          <h3>✅ Control calitate</h3>
+          <p>Verificăm toate lucrările pentru conformitate cu proiectul și standardele de calitate în vigoare.</p>
+        </div>
+        <div class="card feature">
+          <h3>✅ Gestionare buget</h3>
+          <p>Monitorizăm cheltuielile și raportăm periodic stadiul costurilor pentru o transparență completă.</p>
+        </div>
+        <div class="card feature">
+          <h3>✅ Recepție lucrări</h3>
+          <p>Coordonăm recepția finală și predarea lucrărilor către beneficiar, cu documentație completă.</p>
+        </div>
+      </div>
+
+      <div class="actions" style="margin-top:20px;">
+        <a class="cta" href="contact.html">Solicită ofertă personalizată</a>
+        <a class="btn" href="tel:0745667495">📞 0745 667 495</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> Conpro Solutions · Toate drepturile rezervate · 
+    <a href="tel:0745667495">📞 0745 667 495</a><br>
+    <small style="color:#999;">Conpro Solutions (fost Conpro Management)</small>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "name":"Management end-to-end",
+  "provider":{"@type":"Organization","name":"Conpro Management","url":"https://conpro.ro"},
+  "serviceType":"E2E Project Delivery",
+  "areaServed":["Cluj","Târgu Mureș","Baia Mare","Zalău","Oradea","România"]
+}
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>

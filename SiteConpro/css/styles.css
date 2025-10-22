@@ -1,0 +1,163 @@
+/* ===== Conpro Solutions — PRO THEME v2 ===== */
+:root{
+  /* brand */
+.logo-img {
+  height: 50px;         /* ajustează între 42–54px după cum arată mai bine */
+  width: auto;
+  display: block;
+  filter: brightness(1.05); /* face aurul ușor mai vibrant pe fundal închis */
+}
+
+.brand img {
+  vertical-align: middle;
+}
+
+  --gold-900:#8f6a00;
+  --gold-700:#d4af37;
+  --gold-500:#f3d26a;
+  --ink:#0b0f19;
+  --ink-2:#0e1322;
+  --card:#121829;
+  --line:rgba(255,255,255,.10);
+  --text:#e9ecf6;
+  --muted:#a7b0c9;
+
+  /* layout */
+  --radius:22px;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --shadow-soft:0 8px 22px rgba(0,0,0,.25);
+  --w:1200px;
+  --sp-1:8px; --sp-2:12px; --sp-3:16px; --sp-4:24px; --sp-5:32px; --sp-6:48px; --sp-7:72px;
+}
+
+*{box-sizing:border-box}
+html,body{
+  margin:0;height:100%;scroll-behavior:smooth;
+  background:
+    radial-gradient(1100px 700px at 10% -10%, rgba(212,175,55,.08), transparent),
+    radial-gradient(1000px 700px at 110% 8%, rgba(243,210,106,.06), transparent),
+    linear-gradient(180deg, var(--ink), var(--ink-2));
+  color:var(--text);
+  font:16px/1.65 "Plus Jakarta Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+.container{max-width:var(--w);margin:0 auto;padding:0 22px}
+
+/* ===== HEADER ===== */
+header{
+  position:sticky;top:0;z-index:40;
+  background:linear-gradient(180deg, rgba(14,19,34,.85), rgba(14,19,34,.55));
+  backdrop-filter:saturate(120%) blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{
+  width:38px;height:38px;border-radius:10px;
+  background:linear-gradient(135deg,var(--gold-700),var(--gold-500));
+  box-shadow:var(--shadow);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;color:#0b0f19;letter-spacing:.5px
+}
+.brand a{font-weight:800}
+
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+.nav a{
+  position:relative;color:var(--muted);padding:8px 10px;border-radius:10px;transition:.25s ease;
+}
+.nav a:hover{color:var(--text)}
+.nav a::after{
+  content:"";position:absolute;left:10px;right:10px;bottom:6px;height:2px;
+  background:linear-gradient(90deg,var(--gold-700),var(--gold-500));
+  transform:scaleX(0);transform-origin:left;transition:transform .25s ease;
+  border-radius:2px;
+}
+.nav a:hover::after{transform:scaleX(1)}
+.cta{
+  padding:10px 16px;border-radius:999px;font-weight:800;color:#0b0f19;
+  background:linear-gradient(135deg,var(--gold-700),var(--gold-500));
+  box-shadow:var(--shadow-soft);
+}
+
+/* ===== HERO ===== */
+.hero{padding:var(--sp-7) 0 var(--sp-5)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:var(--sp-5);align-items:center}
+h1{font-size:clamp(32px,5.5vw,56px);line-height:1.05;margin:0 0 var(--sp-2);letter-spacing:-.02em}
+.lead{color:var(--muted);font-size:clamp(16px,2.2vw,18px)}
+.hero .actions{display:flex;gap:12px;margin-top:var(--sp-3)}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  border:1px solid var(--line);padding:10px 16px;border-radius:14px;transition:.25s ease
+}
+.btn:hover{border-color:rgba(255,255,255,.22);background:rgba(255,255,255,.06)}
+
+.card{
+  position:relative;overflow:hidden;border-radius:var(--radius);
+  background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border:1px solid var(--line);box-shadow:var(--shadow);
+}
+.card::before{
+  /* film grain fin pentru look premium */
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/feTurbulence%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.02'/%3E%3C/svg%3E");
+}
+
+/* ===== SECTIONS ===== */
+section{padding:var(--sp-6) 0}
+.separator{height:1px;background:linear-gradient(90deg,transparent, var(--line), transparent);margin:var(--sp-6) 0}
+
+h2{font-size:clamp(24px,3.3vw,36px);margin:0 0 var(--sp-2)}
+.sub{color:var(--muted);margin:0 0 var(--sp-4)}
+
+.grid{display:grid;gap:18px}
+.cols-3{grid-template-columns:repeat(3,1fr)}
+
+.feature{padding:18px;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+.feature:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.28);border-color:rgba(255,255,255,.16)}
+.chip{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:13px
+}
+
+/* ===== GALLERY ===== */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.gallery img{
+  width:100%;height:100%;object-fit:cover;border-radius:18px;border:1px solid var(--line);
+  transition:transform .35s ease, box-shadow .35s ease
+}
+.gallery img:hover{transform:scale(1.015);box-shadow:0 20px 40px rgba(0,0,0,.35)}
+
+/* ===== FOOTER ===== */
+footer{
+  padding:28px 0;color:var(--muted);border-top:1px solid var(--line);margin-top:var(--sp-6);
+  text-align:center
+}
+footer a{color:var(--gold-500);font-weight:700}
+footer a:hover{color:var(--gold-700)}
+
+/* ===== FLOAT WHATSAPP ===== */
+.whatsapp-float{
+  position:fixed;right:22px;bottom:22px;width:60px;height:60px;border-radius:50%;
+  background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;
+  font-size:28px;box-shadow:var(--shadow);z-index:60;transition:transform .2s ease
+}
+.whatsapp-float:hover{transform:scale(1.08)}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 980px){
+  .hero .wrap{grid-template-columns:1fr}
+  .cols-3{grid-template-columns:1fr}
+}
+@media (max-width: 760px){
+  nav ul{display:none;position:absolute;right:16px;top:64px;background:rgba(14,19,34,.95);border:1px solid var(--line);border-radius:14px;padding:12px;flex-direction:column}
+  nav ul.open{display:flex}
+  .menuBtn{display:inline-flex;background:none;border:1px solid var(--line);color:var(--text);padding:8px 12px;border-radius:10px;cursor:pointer}
+}
+@media (max-width: 768px) {
+  .logo-img {
+    height: 38px;
+  }
+}

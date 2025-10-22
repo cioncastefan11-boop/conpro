@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<link rel="stylesheet" href="assets/overrides.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" />
+
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Conpro Solutions</title>
+<meta name="description" content="Contactează Conpro Solutions pentru consultanță și management de proiect în construcții. Telefon 0745 667 495 sau formular pentru oferte personalizate." />
+<link rel="canonical" href="https://conpro.ro/contact.html" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Contact | Conpro Solutions" />
+<meta property="og:description" content="Sună la 0745 667 495 sau trimite un mesaj pentru ofertă." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://conpro.ro/contact.html" />
+<meta property="og:image" content="https://conpro.ro/assets/contact-hero.jpg" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Contact | Conpro Solutions" />
+<meta name="twitter:description" content="Consultanță și management de proiect în construcții — cere ofertă." />
+<meta name="twitter:image" content="https://conpro.ro/assets/contact-hero.jpg" />
+
+<!-- ContactPage JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ContactPage",
+  "name":"Contact — Conpro Solutions",
+  "url":"https://conpro.ro/contact.html",
+  "about":{
+    "@type":"Organization",
+    "name":"Conpro Solutions",
+    "url":"https://conpro.ro",
+    "telephone":"+40745667495"
+  }
+}
+</script>
+
+
+<link rel="stylesheet" href="../assets/overrides.css"></head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand">
+  <a href="index.html#top">
+    <img src="../assets/logo.png" alt="Conpro Solutions Logo" class="logo-img" />
+  </a>
+</div>
+<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192x192.png">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<link rel="manifest" href="assets/images/site.webmanifest">
+<meta name="theme-color" content="#0b0f19">
+
+
+    <nav>
+      <button class="menuBtn" aria-expanded="false" aria-controls="menu">Meniu</button>
+      <ul id="menu">
+        <li><a href="index.html#servicii">Servicii</a></li>
+        <li><a href="index.html#despre">Despre</a></li>
+        <li><a href="index.html#galerie">Galerie</a></li>
+        <li><a href="index.html#preturi">Prețuri</a></li>
+        <li><a class="cta" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+  
+
+
+
+  <main id="top">
+    <section class="hero">
+      <div class="container wrap">
+        <div>
+          <h1>Contact Conpro Solutions</h1>
+          <p class="lead">Suntem disponibili pentru proiectele tale de construcții. Scrie-ne sau sună direct.</p>
+          <div class="actions">
+            <a class="cta" href="mailto:?subject=Solicitare%20consultanță%20construcții%20-%20Conpro%20Management">Trimite email</a>
+            <a class="btn" href="tel:0745667495">📞 0745 667 495</a>
+          </div>
+        </div>
+        <div class="card" style="aspect-ratio:16/10; overflow:hidden;">
+  <img src="assets/images/contact-manager.png" 
+       alt="Manager de proiect pe șantier" 
+       style="width:100%; height:100%; object-fit:cover; border-radius:18px;" />
+	</div>
+
+    </section>
+
+   <section>
+  <div class="container">
+    <h2>Trimite-ne un mesaj</h2>
+    <p class="sub">Completează formularul și revenim cât mai curând.</p>
+
+    <form id="contactForm"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          data-netlify-recaptcha="true"
+          class="card feature"
+          style="max-width:600px; margin:auto; padding:20px;">
+
+      <!-- Netlify: numele formularului & honeypot -->
+      <input type="hidden" name="form-name" value="contact" />
+      <p style="display:none;">
+        <label>Nu completa: <input name="bot-field" /></label>
+      </p>
+
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <label>
+          Nume*
+          <input type="text" name="nume" required style="width:100%; padding:8px; border-radius:8px; border:1px solid #ccc;">
+        </label>
+
+        <label>
+          Email*
+          <input type="email" name="email" required style="width:100%; padding:8px; border-radius:8px; border:1px solid #ccc;">
+        </label>
+
+        <label>
+          Telefon
+          <input type="tel" name="telefon" style="width:100%; padding:8px; border-radius:8px; border:1px solid #ccc;">
+        </label>
+
+        <label>
+          Mesaj*
+          <textarea name="mesaj" required rows="5" style="width:100%; padding:8px; border-radius:8px; border:1px solid #ccc;"></textarea>
+        </label>
+
+        <!-- reCAPTCHA by Netlify -->
+        <div data-netlify-recaptcha="true"></div>
+
+        <button type="submit" class="cta" style="border:none; cursor:pointer;">Trimite mesaj</button>
+      </div>
+    </form>
+
+    <!-- Mesaje feedback -->
+    <div id="formSuccess" class="card" style="max-width:600px; margin:16px auto 0; padding:16px; display:none;">
+      ✅ Mesajul tău a fost trimis. Îți mulțumim! Te vom contacta în curând.
+    </div>
+    <div id="formError" class="card" style="max-width:600px; margin:16px auto 0; padding:16px; display:none;">
+      ⚠️ A apărut o problemă la trimitere. Te rugăm să încerci din nou sau să ne suni la <a href="tel:0745667495">0745 667 495</a>.
+    </div>
+  </div>
+</section>
+
+
+
+  </main>
+
+ <footer>
+  <div class="container">
+    © <span id="year"></span> Conpro Solutions · Toate drepturile rezervate · 
+    <a href="tel:0745667495">📞 0745 667 495</a><br>
+    <small style="color:#999;">Conpro Solutions (fost Conpro Management)</small>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+
+  <!-- Buton WhatsApp în colțul dreapta-jos -->
+  <a href="https://wa.me/40745667495" class="whatsapp-float" target="_blank" aria-label="Chat pe WhatsApp">💬</a>
+  <style>
+    .whatsapp-float {
+      position: fixed; width: 60px; height: 60px;
+      bottom: 20px; right: 20px;
+      background-color: #25D366; color: white; border-radius: 50%;
+      text-align: center; font-size: 28px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 1000; display: flex; align-items: center; justify-content: center;
+      text-decoration: none; transition: transform 0.2s ease;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); }
+  </style>
+
+  <script src="js/script.js"></script>
+<script>
+  // Trimite formularul către Netlify fără a părăsi pagina + arată mesaj de confirmare
+  (function () {
+    const form = document.getElementById('contactForm');
+    const ok = document.getElementById('formSuccess');
+    const err = document.getElementById('formError');
+
+    function encode(data) {
+      return new URLSearchParams(data).toString();
+    }
+
+    form?.addEventListener('submit', function (e) {
+      e.preventDefault();
+      ok.style.display = 'none';
+      err.style.display = 'none';
+
+      const fd = new FormData(form);
+      // Asigură-te că numele formularului este inclus
+      fd.append('form-name', form.getAttribute('name') || 'contact');
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode(fd)
+      })
+      .then(() => {
+        form.reset();
+        ok.style.display = 'block';
+        // derulează ușor către mesaj
+        ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      })
+      .catch(() => {
+        err.style.display = 'block';
+        err.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
