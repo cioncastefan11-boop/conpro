@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Management BIM și Cartea tehnică electronică | Conpro Solutions</title>
+  <meta name="description" content="Management BIM conform SR EN ISO 19650 și Cartea tehnică electronică cerută de Legea 169/2026: cerințe BIM pentru caietul de sarcini, dirigenție de șantier cu registru electronic, COBie și dosarul de recepție." />
+  <link rel="canonical" href="https://conpro.ro/bim.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Management BIM pentru beneficiari, conform ISO 19650" />
+  <meta property="og:description" content="De la cerințele din caietul de sarcini până la recepție: primiți clădirea împreună cu modelul as-built, inventarul COBie și Cartea tehnică digitală." />
+  <meta property="og:url" content="https://conpro.ro/bim.html" />
+  <meta property="og:image" content="https://conpro.ro/img/aplicatie-plan-livrare.jpg" />
+  <meta property="og:locale" content="ro_RO" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://conpro.ro/#firma",
+        "name": "Conpro Solutions",
+        "url": "https://conpro.ro/",
+        "telephone": "+40745667495",
+        "email": "office@conpro.ro",
+        "areaServed": "RO",
+        "knowsAbout": ["BIM", "ISO 19650", "Legea 169/2026", "Cartea tehnică a construcției", "COBie", "IFC", "BCF", "Diriginte de șantier", "Responsabil tehnic cu execuția"]
+      },
+      {
+        "@type": "Service",
+        "name": "Management BIM pentru beneficiari, conform ISO 19650",
+        "serviceType": "Management al informației BIM",
+        "provider": {"@id": "https://conpro.ro/#firma"},
+        "areaServed": "RO",
+        "audience": {"@type": "Audience", "audienceType": "Beneficiari publici și privați de lucrări de construcții"},
+        "description": "Cerințe BIM pentru documentația de atribuire, verificarea livrabilelor, dirigenție de șantier cu BIM și predarea modelului as-built, a fișierului COBie și a Cărții tehnice digitale la recepție."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "Ce schimbă Legea 169/2026 pentru Cartea tehnică?",
+           "acceptedAnswer": {"@type": "Answer", "text": "Din 25 august 2026, Cartea tehnică a construcției se întocmește obligatoriu în format electronic și se încarcă în Registrul Național al Construcțiilor (art. 529–530). Dirigintele de șantier o întocmește și o ține la zi pe durata execuției, iar beneficiarul răspunde de înregistrarea ei."}},
+          {"@type": "Question", "name": "Ce spune Legea 169/2026 despre BIM?",
+           "acceptedAnswer": {"@type": "Answer", "text": "Codul prevede protocoalele BIM ca clauză specifică a contractului de execuție (art. 408), verificarea conceptului proiectului în BIM când beneficiarul a ales această metodologie (art. 499) și posibilitatea elaborării PAC în BIM (art. 503). BIM nu e impus prin cod, dar decizia se ia de la începutul investiției."}},
+          {"@type": "Question", "name": "Când devine BIM obligatoriu în proiectele publice din România?",
+           "acceptedAnswer": {"@type": "Answer", "text": "Foaia de parcurs pentru implementarea BIM, asumată prin PNRR, are ca termen anul 2028 pentru investițiile publice. Termenele naționale pot fi decalate, așa că merită pregătit din timp."}},
+          {"@type": "Question", "name": "Ce este ISO 19650?",
+           "acceptedAnswer": {"@type": "Answer", "text": "SR EN ISO 19650 este standardul pentru managementul informațiilor în proiectele BIM. Stabilește cine cere informațiile, cine le produce, în ce stări circulă și cum se predau la final."}},
+          {"@type": "Question", "name": "Ce este COBie?",
+           "acceptedAnswer": {"@type": "Answer", "text": "COBie este un format standard, de obicei un fișier Excel, cu încăperile și echipamentele clădirii: producător, model, serie, garanție și intervale de mentenanță. Se predă la recepție pentru administrarea clădirii."}},
+          {"@type": "Question", "name": "Am nevoie de un model BIM complet ca să lucrez așa?",
+           "acceptedAnswer": {"@type": "Answer", "text": "Nu neapărat. Cerințele se stabilesc proporțional cu lucrarea și bugetul. Pentru o lucrare mică se pot cere doar încăperile, echipamentele și Cartea tehnică, fără model as-built complet."}}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #0f172a;
+      --dark: #1e293b;
+      --muted: #64748b;
+      --light: #f8fafc;
+      --white: #ffffff;
+      --border: #e2e8f0;
+      --accent: #f97316;
+      --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+      --radius: 16px;
+      --container: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--primary);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 24px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--white);
+      color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-dark {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .btn-dark:hover {
+      background: var(--dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      color: var(--white);
+      border-color: rgba(255,255,255,0.75);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    .section {
+      padding: 110px 0;
+    }
+
+    .section-light {
+      background: var(--light);
+    }
+
+    .section-title {
+      max-width: 720px;
+      margin-bottom: 56px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      color: var(--accent);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Poppins", sans-serif;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: clamp(40px, 5vw, 68px);
+      color: var(--white);
+      letter-spacing: -0.04em;
+      max-width: 760px;
+    }
+
+    h2 {
+      font-size: clamp(32px, 3vw, 46px);
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .logo {
+      font-family: "Poppins", sans-serif;
+      font-weight: 800;
+      font-size: 26px;
+      letter-spacing: -0.04em;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-weight: 700;
+      color: var(--dark);
+      font-size: 15px;
+    }
+
+    .phone {
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 720px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.82) 42%, rgba(15,23,42,0.25) 100%),
+        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 120px;
+      background: linear-gradient(0deg, rgba(15,23,42,0.45), transparent);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 90px 0;
+    }
+
+    .hero p {
+      max-width: 610px;
+      color: #cbd5e1;
+      font-size: 20px;
+      margin: 26px 0 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 42px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: #e2e8f0;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .hero-meta span {
+      padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+    }
+
+    /* Credibility */
+    .credibility {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .credibility-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      padding: 34px 0;
+    }
+
+    .credibility-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: var(--accent);
+      background: #fff7ed;
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 34px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(226, 232, 240, 0.65);
+      border-top: 3px solid transparent;
+      transition: 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 54px rgba(15, 23, 42, 0.13);
+      border-top-color: var(--accent);
+    }
+
+    .service-card .icon {
+      margin-bottom: 28px;
+      width: 54px;
+      height: 54px;
+    }
+
+
+    /* Process */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      position: relative;
+    }
+
+    .process-step {
+      position: relative;
+      padding: 28px 20px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--white);
+    }
+
+    .step-number {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: var(--white);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .project-card {
+      min-height: 260px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 28px;
+      background-size: cover;
+      background-position: center;
+      transition: 0.3s ease;
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15,23,42,0.1), rgba(15,23,42,0.82));
+    }
+
+    .project-card h3 {
+      position: relative;
+      color: var(--white);
+      z-index: 1;
+      margin: 0;
+    }
+
+    .project-card:hover {
+      transform: scale(1.02);
+    }
+
+    .project-1 { background-image: url("https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=80"); }
+    .project-2 { background-image: url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80"); }
+    .project-3 { background-image: url("https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=80"); }
+    .project-4 { background-image: url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"); }
+
+    /* Risk */
+    .risk-wrap {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .risk-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .risk-item {
+      display: flex;
+      gap: 14px;
+      padding: 18px;
+      border-radius: 14px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 25px rgba(15,23,42,0.04);
+      font-weight: 700;
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 90px 0;
+    }
+
+    .cta h2 {
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      color: #cbd5e1;
+      font-size: 19px;
+      margin-bottom: 28px;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .contact-card {
+      background: var(--primary);
+      color: var(--white);
+      padding: 42px;
+      border-radius: var(--radius);
+    }
+
+    .contact-card p,
+    .contact-card a {
+      color: #cbd5e1;
+    }
+
+    .contact-line {
+      margin-top: 26px;
+      display: grid;
+      gap: 14px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .form {
+      display: grid;
+      gap: 16px;
+      padding: 38px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .field {
+      width: 100%;
+      height: 52px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0 16px;
+      font: inherit;
+      outline: none;
+    }
+
+    textarea.field {
+      height: 130px;
+      padding-top: 14px;
+      resize: vertical;
+    }
+
+    .field:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(15,23,42,0.08);
+    }
+
+    /* Footer */
+    .footer {
+      padding: 42px 0;
+      border-top: 1px solid var(--border);
+      background: var(--primary);
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    .footer .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      display: grid;
+      gap: 4px;
+    }
+
+    .footer-brand strong {
+      color: var(--white);
+      font-family: "Poppins", sans-serif;
+      font-size: 20px;
+      letter-spacing: -0.03em;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .footer-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      color: #e2e8f0;
+      font-weight: 700;
+      transition: 0.25s ease;
+    }
+
+    .footer-links a:hover {
+      background: var(--white);
+      color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 60;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #22c55e;
+      color: var(--white);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      box-shadow: 0 16px 36px rgba(34, 197, 94, 0.35);
+    }
+
+    @media (max-width: 1024px) {
+      .menu {
+        display: none;
+      }
+
+      .credibility-grid,
+      .services-grid,
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .risk-wrap,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(100% - 32px, var(--container));
+      }
+
+      .nav {
+        height: 72px;
+      }
+
+      .hero {
+        min-height: 660px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .section {
+        padding: 76px 0;
+      }
+
+      .credibility-grid,
+      .services-grid,
+      .projects-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form,
+      .contact-card {
+        padding: 26px;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+    }
+  
+    /* GDPR / Cookies */
+    .gdpr-banner {
+      position: fixed;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      z-index: 100;
+      max-width: 1040px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.98);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 24px 70px rgba(15, 23, 42, 0.22);
+      padding: 24px;
+      display: none;
+      gap: 24px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .gdpr-banner.is-visible {
+      display: flex;
+    }
+
+    .gdpr-banner h3 {
+      margin-bottom: 6px;
+      font-size: 18px;
+    }
+
+    .gdpr-banner p {
+      font-size: 14px;
+      max-width: 640px;
+    }
+
+    .gdpr-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      flex: 0 0 auto;
+    }
+
+    .btn-small {
+      min-height: 42px;
+      padding: 0 18px;
+      font-size: 14px;
+    }
+
+    .btn-muted {
+      background: var(--light);
+      color: var(--primary);
+      border-color: var(--border);
+    }
+
+    .gdpr-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 110;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(15, 23, 42, 0.72);
+    }
+
+    .gdpr-modal.is-visible {
+      display: flex;
+    }
+
+    .gdpr-panel {
+      width: min(680px, 100%);
+      max-height: calc(100vh - 48px);
+      overflow: auto;
+      background: var(--white);
+      border-radius: 22px;
+      box-shadow: 0 30px 90px rgba(0,0,0,0.32);
+      padding: 32px;
+    }
+
+    .gdpr-panel-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+
+    .gdpr-close {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--light);
+      cursor: pointer;
+      font-weight: 900;
+    }
+
+    .cookie-option {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 14px;
+    }
+
+    .cookie-option strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .cookie-option p {
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      width: 54px;
+      height: 30px;
+      flex: 0 0 auto;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      inset: 0;
+      background: #cbd5e1;
+      transition: .25s;
+      border-radius: 999px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 22px;
+      width: 22px;
+      left: 4px;
+      bottom: 4px;
+      background: white;
+      transition: .25s;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+
+    .switch input:checked + .slider {
+      background: var(--primary);
+    }
+
+    .switch input:checked + .slider:before {
+      transform: translateX(24px);
+    }
+
+    .switch input:disabled + .slider {
+      background: var(--accent);
+      cursor: not-allowed;
+    }
+
+    .consent-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .consent-check input {
+      margin-top: 4px;
+      width: 18px;
+      height: 18px;
+      accent-color: var(--primary);
+      flex: 0 0 auto;
+    }
+
+    .consent-check a {
+      color: var(--primary);
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .footer a:hover,
+    .gdpr-banner a:hover {
+      color: var(--accent);
+    }
+
+    @media (max-width: 760px) {
+      .gdpr-banner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .gdpr-actions {
+        width: 100%;
+      }
+
+      .gdpr-actions .btn {
+        width: 100%;
+      }
+
+      .cookie-option {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  
+    /* ===== Pagina BIM ===== */
+    .menu a.is-current { color: var(--accent); }
+
+    .bim-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(15,23,42,0.97) 0%, rgba(15,23,42,0.9) 55%, rgba(30,41,59,0.85) 100%),
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 48px),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 48px),
+        var(--primary);
+    }
+    .bim-hero .hero-content { padding: 110px 0 100px; }
+    .bim-hero h1 { max-width: 900px; }
+    .bim-hero p.lead { max-width: 680px; color: #cbd5e1; font-size: 20px; margin: 26px 0 34px; }
+
+    .breadcrumb { font-size: 14px; color: #94a3b8; margin-bottom: 18px; }
+    .breadcrumb a:hover { color: var(--white); }
+
+    .problem-wrap { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 56px; align-items: center; }
+    .big-number { font-family: "Poppins", sans-serif; font-size: clamp(96px, 12vw, 168px); line-height: 1; color: var(--accent); letter-spacing: -0.05em; }
+    .problem-text p { font-size: 18px; margin-bottom: 14px; }
+    .problem-text p.strong { color: var(--primary); font-weight: 700; font-size: 21px; }
+    .source { font-size: 13px; color: var(--muted); margin-top: 18px; }
+
+    .cards-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .date-card { background: var(--white); border: 1px solid var(--border); border-top: 4px solid var(--accent); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); }
+    .date-card .when { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 30px; color: var(--primary); display: block; margin-bottom: 10px; }
+
+    .role-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    .role-box { border-radius: var(--radius); padding: 38px; border: 1px solid var(--border); background: var(--white); }
+    .role-box ul { list-style: none; display: grid; gap: 12px; margin-top: 18px; }
+    .role-box li { display: flex; gap: 12px; color: var(--dark); font-weight: 600; }
+    .role-box li::before { content: "✓"; color: var(--accent); font-weight: 900; }
+    .role-box.is-us { background: var(--primary); border-color: var(--primary); }
+    .role-box.is-us h3 { color: var(--white); }
+    .role-box.is-us p { color: #cbd5e1; }
+    .role-box.is-us li { color: #e2e8f0; }
+
+    .steps-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .step-card { position: relative; padding: 30px 24px; border-radius: var(--radius); border: 1px solid var(--border); background: var(--white); display: grid; gap: 10px; align-content: start; }
+    .step-card .iso { font-size: 13px; font-weight: 700; color: var(--muted); letter-spacing: 0.04em; }
+    .step-card ul { list-style: none; display: grid; gap: 8px; margin-top: 6px; }
+    .step-card li { font-size: 15px; color: var(--muted); padding-left: 16px; position: relative; }
+    .step-card li::before { content: ""; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+    .step-card.is-final { background: var(--primary); border-color: var(--primary); }
+    .step-card.is-final h3 { color: var(--white); }
+    .step-card.is-final li { color: #cbd5e1; }
+    .step-card.is-final .iso { color: #94a3b8; }
+
+    .deliver-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .deliver { background: var(--white); border-radius: var(--radius); padding: 28px; border: 1px solid var(--border); border-left: 4px solid var(--accent); }
+
+    .app-wrap { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 56px; align-items: center; }
+    .app-shot { width: 100%; height: auto; border-radius: var(--radius); box-shadow: 0 24px 60px rgba(15,23,42,0.18); border: 1px solid var(--border); }
+    .note { font-size: 14px; color: var(--muted); margin-top: 14px; }
+
+    .pilot { background: var(--accent); }
+    .pilot h2, .pilot h3 { color: var(--primary); }
+    .pilot p { color: #431407; }
+    .pilot .steps-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin: 36px 0; }
+    .pilot .num { font-family: "Poppins", sans-serif; font-size: 48px; font-weight: 700; color: var(--primary); line-height: 1; display: block; margin-bottom: 10px; }
+
+    .faq { display: grid; gap: 14px; max-width: 860px; }
+    .faq details { border: 1px solid var(--border); border-radius: 14px; background: var(--white); padding: 0 22px; }
+    .faq summary { cursor: pointer; padding: 20px 0; font-weight: 700; color: var(--primary); list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; color: var(--accent); font-weight: 900; font-size: 20px; line-height: 1; }
+    .faq details[open] summary::after { content: "–"; }
+    .faq details p { padding-bottom: 20px; }
+
+    .btn:focus-visible, .faq summary:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+    @media (max-width: 1024px) {
+      .problem-wrap, .role-wrap, .app-wrap { grid-template-columns: 1fr; }
+      .cards-3, .pilot .steps-3 { grid-template-columns: 1fr; }
+      .steps-4, .deliver-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .steps-4, .deliver-grid { grid-template-columns: 1fr; }
+      .bim-hero .hero-content { padding: 80px 0 70px; }
+      .bim-hero p.lead { font-size: 17px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .service-card { transition: none; } }
+
+    /* Harta BIM (rezumat) */
+    .flows { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 44px; }
+    .flow { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--dark); padding: 7px 14px; border: 1px solid var(--border); border-radius: 999px; background: var(--white); }
+    .flow i { width: 22px; height: 6px; border-radius: 3px; background: var(--fc); }
+    .route { list-style: none; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; position: relative; }
+    .route::before { content: ""; position: absolute; left: 24px; right: 24px; top: 21px; height: 6px; border-radius: 3px; background: linear-gradient(90deg, var(--primary) 0%, var(--primary) 30%, var(--accent) 36%, var(--accent) 80%, #22c55e 92%); }
+    .stop { position: relative; display: grid; gap: 16px; align-content: start; }
+    .stop .dot { position: relative; z-index: 1; width: 48px; height: 48px; border-radius: 50%; background: var(--white); border: 6px solid var(--primary); display: grid; place-items: center; font-weight: 800; color: var(--primary); }
+    .stop.is-site .dot { border-color: var(--accent); }
+    .stop.is-final .dot { border-color: #22c55e; }
+    .stop .box { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 18px 16px; display: grid; gap: 8px; align-content: start; height: 100%; box-shadow: 0 10px 25px rgba(15,23,42,0.04); }
+    .stop.is-site .box { border-top: 3px solid var(--accent); }
+    .stop .iso { font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: 0.02em; }
+    .stop h3 { font-size: 18px; margin: 0; }
+    .stop .who { font-size: 13px; font-weight: 700; color: #c2410c; }
+    .stop .lead { font-size: 14px; color: var(--dark); line-height: 1.5; }
+    .stop ul { list-style: none; display: grid; gap: 6px; }
+    .stop li { font-size: 13.5px; color: var(--muted); line-height: 1.45; padding-left: 14px; position: relative; }
+    .stop li::before { content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+    .mini { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+    .mini span { font-size: 11px; font-weight: 700; color: var(--white); background: var(--fc); border-radius: 4px; padding: 2px 6px; }
+    .map-cta { margin-top: 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding: 28px; border-radius: var(--radius); background: var(--light); border: 1px solid var(--border); }
+    .map-cta p { max-width: 720px; color: var(--dark); }
+    @media (max-width: 1200px) {
+      .route { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 28px; }
+      .route::before { display: none; }
+    }
+    @media (max-width: 760px) {
+      .route { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+      .route::before { display: block; left: 21px; right: auto; top: 24px; bottom: 24px; width: 6px; height: auto; background: linear-gradient(180deg, var(--primary) 0%, var(--primary) 30%, var(--accent) 36%, var(--accent) 80%, #22c55e 92%); }
+      .stop { grid-template-columns: 48px minmax(0, 1fr); gap: 14px; }
+    }
+
+    /* Legea 169/2026 */
+    .lege { background: var(--primary); }
+    .lege .section-title h2 { color: var(--white); }
+    .lege .section-title p { color: #cbd5e1; }
+    .lege .source { color: #94a3b8; }
+    .law-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+    .law-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.14); border-top: 4px solid var(--accent); border-radius: var(--radius); padding: 26px 22px; display: grid; gap: 10px; align-content: start; }
+    .law-card .art { font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: 0.03em; }
+    .law-card h3 { color: var(--white); font-size: 19px; margin: 0; }
+    .law-card p { color: #cbd5e1; font-size: 15px; }
+    .law-note { margin-top: 30px; color: var(--white); font-weight: 600; font-size: 18px; max-width: 820px; }
+    @media (max-width: 1024px) { .law-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 640px) { .law-grid { grid-template-columns: 1fr; } }
+  
+    /* Conpro BIM: legătura spre aplicație, vizibilă și pe telefon */
+    .nav-app, .nav-app-mobil { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border: 2px solid var(--accent); border-radius: 999px; color: var(--primary); font-weight: 800; line-height: 1; white-space: nowrap; text-decoration: none; }
+    .nav-app::before, .nav-app-mobil::before { content: ""; width: 9px; height: 9px; background: var(--accent); border-radius: 2px; flex: none; }
+    .nav-app:hover, .nav-app-mobil:hover { background: var(--accent); color: #fff; }
+    .nav-app:hover::before, .nav-app-mobil:hover::before { background: #fff; }
+    .nav-app-mobil { display: none; }
+    @media (max-width: 1024px) { .nav-app-mobil { display: inline-flex; min-height: 44px; padding: 10px 16px; font-size: 15px; } }
+    .logo { white-space: nowrap; }
+    @media (max-width: 640px) { .nav { gap: 12px; } .logo { font-size: 20px; } .nav-app-mobil { padding: 9px 12px; font-size: 14px; gap: 7px; } }
+    @media (max-width: 360px) { .logo { font-size: 17px; } .nav-app-mobil { padding: 9px 10px; font-size: 13px; } }
+  </style>
+  <script src="/js/ga-consent.js?v=20261110"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="/" class="logo">CON<span>PRO SOLUTIONS</span></a>
+
+      <nav class="menu" aria-label="Navigatie principala">
+        <a href="/#servicii">Servicii</a>
+        <a aria-current='page' class='is-current' href='/bim'>BIM</a>
+        <a href="/#proces">Proces</a>
+        <a href="/#contact">Contact</a>
+        <a href="https://bim.conpro.ro" class="nav-app">Conpro BIM</a>
+        <a href="tel:+40745667495" class="phone">0745 667 495</a>
+        <a href="/#contact" class="btn btn-dark">Solicita oferta</a>
+      </nav>
+      <a href="https://bim.conpro.ro" class="nav-app-mobil">Conpro BIM</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="bim-hero">
+      <div class="container hero-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Acasă</a> / Management BIM</nav>
+        <span class="eyebrow">Management BIM · SR EN ISO 19650</span>
+        <h1>Primiți clădirea împreună cu toate datele ei</h1>
+        <p class="lead">Management BIM pentru beneficiari publici și privați: de la cerințele din caietul de sarcini până la recepție, cu modelul as-built, inventarul echipamentelor și Cartea tehnică electronică cerută de Legea 169/2026, predate corect.</p>
+        <div class="hero-actions">
+          <a href="/#contact" class="btn btn-primary">Solicită o discuție</a>
+          <a href="#cum-lucram" class="btn btn-outline">Vezi harta BIM</a>
+        </div>
+        <div class="hero-meta">
+          <span>Cerințe BIM pentru licitație</span>
+          <span>Dirigenție de șantier cu BIM</span>
+          <span>Cartea tehnică electronică, Legea 169/2026</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="problema">
+      <div class="container problem-wrap">
+        <div>
+          <span class="eyebrow">Problema</span>
+          <div class="big-number">73%</div>
+        </div>
+        <div class="problem-text">
+          <h2>La recepție se predă clădirea, dar informațiile ei se pierd</h2>
+          <p class="strong">73% din cele 1.275 de echipamente analizate într-un studiu despre predarea datelor nu aveau proceduri de mentenanță.</p>
+          <p>Peste jumătate nu aveau garanția, numărul de serie sau locul manualului. Cauza nu era software-ul, ci cerințele neclare de la început și datele adunate la final, din memorie.</p>
+          <p class="source">Sursa: „BIM for Facilities Management: An Investigation into the Asset Information Delivery Process and the Associated Challenges”, Applied Sciences (MDPI), 2022.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section lege" id="legea-169">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">Legea 169/2026 · în vigoare din 25 august 2026</span>
+          <h2>Cartea tehnică devine electronică, iar dirigintele o ține la zi</h2>
+          <p>Noul Cod al amenajării teritoriului, urbanismului și construcțiilor înlocuiește Legea 10/1995 și Legea 50/1991 și mută documentele lucrării în format digital.</p>
+        </div>
+        <div class="law-grid">
+          <article class="law-card">
+            <span class="art">art. 529–530</span>
+            <h3>Cartea tehnică în format electronic</h3>
+            <p>Se întocmește obligatoriu în format electronic și se încarcă în Registrul Național al Construcțiilor, legat de cadastru și cartea funciară. Beneficiarul răspunde de înregistrare.</p>
+          </article>
+          <article class="law-card">
+            <span class="art">art. 456</span>
+            <h3>Registrul electronic al dirigintelui</h3>
+            <p>Dirigintele de șantier ține la zi un registru electronic de evidență a activității, coordonează Cartea tehnică pe durata execuției și întocmește documentele de recepție.</p>
+          </article>
+          <article class="law-card">
+            <span class="art">art. 528</span>
+            <h3>Dosarul complet la recepție</h3>
+            <p>Punctele de vedere ale proiectanților și dirigintelui, procesele verbale, Cartea tehnică, manualul de utilizare și mentenanță și proiectul as-built.</p>
+          </article>
+          <article class="law-card">
+            <span class="art">art. 408, 499, 503</span>
+            <h3>BIM în contract</h3>
+            <p>Protocoalele BIM sunt clauză specifică a contractului de execuție, iar conceptul și proiectul pentru autorizare pot fi elaborate și verificate în BIM.</p>
+          </article>
+        </div>
+        <p class="law-note">Pregătim Cartea tehnică din prima zi de șantier, din procesele verbale, FAM-uri și încercări, nu din dosare adunate la final.</p>
+        <p class="source">Sursa: Legea nr. 169/2026, Monitorul Oficial nr. 661 din 10 august 2026, cu rectificările din Monitorul Oficial nr. 862 din 14 octombrie 2026.</p>
+      </div>
+    </section>
+
+    <section class="section" id="termene">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">Ce mai vine</span>
+          <h2>Până în 2028, informațiile devin obligatorii</h2>
+          <p>Trei schimbări cer beneficiarului să știe ce informații cere și să le poată verifica.</p>
+        </div>
+        <div class="cards-3">
+          <article class="date-card">
+            <span class="when">Ianuarie 2026</span>
+            <h3>Produsele pentru construcții</h3>
+            <p>Noul regulament european (CPR 2024/3110) se aplică. Declarația de performanță devine digitală, iar pașapoartele digitale ale produselor vin treptat, până în 2032.</p>
+          </article>
+          <article class="date-card">
+            <span class="when">2028</span>
+            <h3>BIM în proiectele publice</h3>
+            <p>Termenul asumat prin foaia de parcurs din PNRR pentru BIM obligatoriu în investițiile publice din România.</p>
+          </article>
+          <article class="date-card">
+            <span class="when">2028</span>
+            <h3>Clădirile publice noi</h3>
+            <p>Directiva EPBD cere clădiri publice noi cu zero emisii și calculul amprentei de carbon pe ciclul de viață pentru clădirile noi de peste 1.000 m².</p>
+          </article>
+        </div>
+        <p class="source">Surse: Regulamentul (UE) 2024/3110, Directiva (UE) 2024/1275, foaia de parcurs BIM a MDLPA. Termenele naționale pot fi decalate.</p>
+      </div>
+    </section>
+
+    <section class="section section-light" id="rol">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">Rolul nostru</span>
+          <h2>ISO 19650 pune beneficiarul la conducere, dar îi permite să delege</h2>
+          <p>Standardul pentru managementul informațiilor în proiectele BIM stabilește cine cere informațiile, cine le produce și cine le acceptă.</p>
+        </div>
+        <div class="role-wrap">
+          <div class="role-box">
+            <h3>Beneficiarul răspunde de</h3>
+            <ul>
+              <li>ce informații îi trebuie pentru exploatarea clădirii</li>
+              <li>cerințele din documentația de atribuire</li>
+              <li>acceptarea livrabilelor la fiecare etapă</li>
+              <li>arhivarea și păstrarea informațiilor</li>
+            </ul>
+          </div>
+          <div class="role-box is-us">
+            <h3>Noi preluăm managementul informației</h3>
+            <p>Funcția pe care standardul permite beneficiarului să o încredințeze unui consultant (SR EN ISO 19650-2, clauza 5.1.1).</p>
+            <ul>
+              <li>scriem cerințele și capitolul BIM al caietului de sarcini</li>
+              <li>verificăm ce livrează proiectantul și constructorul</li>
+              <li>vă recomandăm ce să acceptați și ce să respingeți</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cum-lucram">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">Harta BIM</span>
+          <h2>Drumul spre construcții digitale, pas cu pas</h2>
+          <p>Șase etape, de la tema beneficiarului până la exploatarea clădirii, după SR EN ISO 19650 și stadiile din Legea 169/2026. Informațiile produse la o etapă trec mai departe, fără să fie reintroduse, până ajung la cel care administrează clădirea.</p>
+        </div>
+
+        <div class="flows" aria-label="Fluxurile de informații">
+          <span class="flow" style="--fc:#5d6e7e"><i></i><b>CDE</b> mediul comun de date</span>
+          <span class="flow" style="--fc:#2c6db0"><i></i><b>IFC</b> modelul clădirii</span>
+          <span class="flow" style="--fc:#c4442a"><i></i><b>BCF</b> observații pe model</span>
+          <span class="flow" style="--fc:#2c8556"><i></i><b>PV</b> procese verbale</span>
+          <span class="flow" style="--fc:#9a5b1e"><i></i><b>MAT</b> materiale și încercări</span>
+          <span class="flow" style="--fc:#7a4fb0"><i></i><b>COBie</b> datele echipamentelor</span>
+        </div>
+
+        <ol class="route">
+          <li class="stop">
+            <span class="dot">1</span>
+            <div class="box">
+              <span class="iso">ISO 19650-2 · 5.1 · CATUC st. 0–1</span>
+              <h3>Cerințe</h3>
+              <span class="who">Beneficiar, cu noi</span>
+              <p class="lead">Beneficiarul hotărăște ce informații îi trebuie pentru exploatare și decizii.</p>
+              <ul>
+                <li>Cerințele organizației, ale clădirii și ale proiectului</li>
+                <li>Standardul de informații</li>
+                <li>Mediul comun de date</li>
+              </ul>
+              <div class="mini"><span style="--fc:#5d6e7e">CDE</span></div>
+            </div>
+          </li>
+          <li class="stop">
+            <span class="dot">2</span>
+            <div class="box">
+              <span class="iso">ISO 19650-2 · 5.2–5.4</span>
+              <h3>Licitație și contract</h3>
+              <span class="who">Beneficiar, ofertanți</span>
+              <p class="lead">Cerințele intră în documentația de atribuire și devin obligații contractuale.</p>
+              <ul>
+                <li>Capitolul BIM și cerințele de schimb (EIR)</li>
+                <li>Planul BIM de execuție (BEP)</li>
+                <li>Planul de livrare a informațiilor</li>
+              </ul>
+              <div class="mini"><span style="--fc:#5d6e7e">CDE</span></div>
+            </div>
+          </li>
+          <li class="stop is-site">
+            <span class="dot">3</span>
+            <div class="box">
+              <span class="iso">ISO 19650-2 · 5.5 · CATUC st. 5</span>
+              <h3>Mobilizare</h3>
+              <span class="who">Constructor, diriginte</span>
+              <p class="lead">Toți pornesc de la aceeași versiune a modelului și știu ce se predă la final.</p>
+              <ul>
+                <li>Model de execuție verificat și publicat</li>
+                <li>Lista FAM și planul de încercări</li>
+                <li>Lista de date pentru echipamente</li>
+              </ul>
+              <div class="mini"><span style="--fc:#5d6e7e">CDE</span><span style="--fc:#2c6db0">IFC</span><span style="--fc:#c4442a">BCF</span><span style="--fc:#2c8556">PV</span><span style="--fc:#9a5b1e">MAT</span><span style="--fc:#7a4fb0">COBie</span></div>
+            </div>
+          </li>
+          <li class="stop is-site">
+            <span class="dot">4</span>
+            <div class="box">
+              <span class="iso">ISO 19650-2 · 5.6 · CATUC st. 5</span>
+              <h3>Execuție</h3>
+              <span class="who">Constructor, diriginte, proiectant</span>
+              <p class="lead">Fiecare verificare de pe șantier lasă o urmă în model.</p>
+              <ul>
+                <li>Neconformități pe model, cu termen</li>
+                <li>PV-uri legate de elemente</li>
+                <li>FAM, condica de betoane, încercări</li>
+                <li>Echipamente înregistrate la montaj</li>
+              </ul>
+              <div class="mini"><span style="--fc:#5d6e7e">CDE</span><span style="--fc:#2c6db0">IFC</span><span style="--fc:#c4442a">BCF</span><span style="--fc:#2c8556">PV</span><span style="--fc:#9a5b1e">MAT</span><span style="--fc:#7a4fb0">COBie</span></div>
+            </div>
+          </li>
+          <li class="stop is-site">
+            <span class="dot">5</span>
+            <div class="box">
+              <span class="iso">ISO 19650-2 · 5.7–5.8 · CATUC st. 5–6</span>
+              <h3>Recepție și predare</h3>
+              <span class="who">Diriginte, beneficiar</span>
+              <p class="lead">Pachetul de informații e verificat, acceptat și predat odată cu clădirea.</p>
+              <ul>
+                <li>Model as-built verificat</li>
+                <li>COBie validat</li>
+                <li>Cartea tehnică electronică</li>
+                <li>Arhiva proiectului</li>
+              </ul>
+              <div class="mini"><span style="--fc:#5d6e7e">CDE</span><span style="--fc:#2c6db0">IFC</span><span style="--fc:#c4442a">BCF</span><span style="--fc:#2c8556">PV</span><span style="--fc:#9a5b1e">MAT</span><span style="--fc:#7a4fb0">COBie</span></div>
+            </div>
+          </li>
+          <li class="stop is-final">
+            <span class="dot">6</span>
+            <div class="box">
+              <span class="iso">ISO 19650-3 · CATUC st. 7</span>
+              <h3>Exploatare</h3>
+              <span class="who">Administratorul clădirii</span>
+              <p class="lead">Datele predate devin baza pentru administrarea clădirii.</p>
+              <ul>
+                <li>Garanții și mentenanță</li>
+                <li>Defecte urmărite pe model</li>
+                <li>Date ținute la zi până la recepția finală</li>
+              </ul>
+              <div class="mini"><span style="--fc:#2c6db0">IFC</span><span style="--fc:#c4442a">BCF</span><span style="--fc:#7a4fb0">COBie</span></div>
+            </div>
+          </li>
+        </ol>
+
+        <div class="map-cta">
+          <p>Harta interactivă arată fiecare rol și fiecare livrabil din ISO 19650, plus fluxurile de pe șantier, etapă cu etapă, cu condițiile de trecere la etapa următoare.</p>
+          <a class='btn btn-dark' href='/harta-bim'>Deschide harta interactivă</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="la-receptie">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">Ce primiți</span>
+          <h2>La recepție primiți clădirea și datele cu care o administrați</h2>
+          <p>Pe baza lor faceți planul de mentenanță, cereți remedieri în garanție și răspundeți la controale.</p>
+        </div>
+        <div class="deliver-grid">
+          <article class="deliver"><h3>Modelul as-built</h3><p>Clădirea așa cum a fost executată, verificată prin sondaj, în format IFC, pentru lucrările viitoare.</p></article>
+          <article class="deliver"><h3>Inventarul COBie</h3><p>Fiecare echipament, pe încăperi, cu producător, serie, garanție și interval de mentenanță.</p></article>
+          <article class="deliver"><h3>Cartea tehnică electronică</h3><p>Procese verbale, FAM-uri, condica de betoane și buletine de încercări, cu opis pe capitole, pregătită pentru Registrul Național al Construcțiilor.</p></article>
+          <article class="deliver"><h3>Istoricul deciziilor</h3><p>Toate observațiile și răspunsurile din șantier, cu locul exact în clădire, în format BCF.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="aplicatie">
+      <div class="container app-wrap">
+        <div>
+          <span class="eyebrow">Aplicația</span>
+          <h2>Totul se vede într-o singură aplicație</h2>
+          <p>Planul de livrare, documentele cu revizii și stări, procesele verbale, materialele și echipamentele lucrării. Vedeți oricând ce s-a livrat, ce s-a acceptat și ce a depășit termenul.</p>
+          <p class="note">Captura arată un proiect de exemplu. Aplicația e în dezvoltare și o folosim pe lucrările noastre.</p>
+          <p style="margin-top:22px"><a href="https://bim.conpro.ro" class="btn btn-dark">Vezi aplicația Conpro BIM</a></p>
+        </div>
+        <img class="app-shot" src="/img/aplicatie-plan-livrare.jpg" width="1400" height="1095" loading="eager" alt="Planul de livrare al unei lucrări de exemplu: livrabile acceptate, transmise și neîncepute, cu formatul, termenul și responsabilul fiecăruia">
+      </div>
+    </section>
+
+    <section class="section pilot" id="pilot">
+      <div class="container">
+        <h2>Începem cu o singură lucrare</h2>
+        <div class="steps-3">
+          <div><span class="num">1</span><h3>Alegem lucrarea</h3><p>O investiție în pregătire sau deja în execuție.</p></div>
+          <div><span class="num">2</span><h3>Stabilim ce vă trebuie</h3><p>Cerințe proporționale cu bugetul și cu ce veți folosi efectiv.</p></div>
+          <div><span class="num">3</span><h3>Predăm și evaluăm</h3><p>La recepție primiți datele și decideți dacă extindem modelul.</p></div>
+        </div>
+        <a href="/#contact" class="btn btn-dark">Propuneți o lucrare pilot</a>
+      </div>
+    </section>
+
+    <section class="section" id="intrebari">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">Întrebări frecvente</span>
+          <h2>Despre BIM, Legea 169/2026 și COBie</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Ce schimbă Legea 169/2026 pentru Cartea tehnică?</summary>
+            <p>Din 25 august 2026, Cartea tehnică a construcției se întocmește obligatoriu în format electronic și se încarcă în Registrul Național al Construcțiilor (art. 529–530). Dirigintele de șantier o întocmește și o ține la zi pe durata execuției, iar beneficiarul răspunde de înregistrarea ei.</p>
+          </details>
+          <details>
+            <summary>Ce spune Legea 169/2026 despre BIM?</summary>
+            <p>Codul prevede protocoalele BIM ca clauză specifică a contractului de execuție (art. 408), verificarea conceptului proiectului în BIM când beneficiarul a ales această metodologie (art. 499) și posibilitatea elaborării PAC în BIM (art. 503). BIM nu e impus prin cod, dar decizia se ia de la începutul investiției.</p>
+          </details>
+          <details>
+            <summary>Când devine BIM obligatoriu în proiectele publice din România?</summary>
+            <p>Foaia de parcurs pentru implementarea BIM, asumată prin PNRR, are ca termen anul 2028 pentru investițiile publice. Termenele naționale pot fi decalate, așa că merită pregătit din timp.</p>
+          </details>
+          <details>
+            <summary>Ce este ISO 19650?</summary>
+            <p>SR EN ISO 19650 este standardul pentru managementul informațiilor în proiectele BIM. Stabilește cine cere informațiile, cine le produce, în ce stări circulă și cum se predau la final.</p>
+          </details>
+          <details>
+            <summary>Ce este COBie?</summary>
+            <p>COBie este un format standard, de obicei un fișier Excel, cu încăperile și echipamentele clădirii: producător, model, serie, garanție și intervale de mentenanță. Se predă la recepție pentru administrarea clădirii.</p>
+          </details>
+          <details>
+            <summary>Am nevoie de un model BIM complet ca să lucrez așa?</summary>
+            <p>Nu neapărat. Cerințele se stabilesc proporțional cu lucrarea și bugetul. Pentru o lucrare mică se pot cere doar încăperile, echipamentele și Cartea tehnică, fără model as-built complet.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Pregătiți o investiție?</h2>
+        <p>Vorbim o oră despre lucrarea dumneavoastră și vă spunem ce informații merită cerute.</p>
+        <a href="/#contact" class="btn btn-primary">Solicită o discuție</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">
+        <strong>Conpro Solutions</strong>
+        <span>© 2026 Conpro Solutions. Toate drepturile rezervate.</span>
+        <span>RTE · Diriginte de Șantier · Manager BIM</span>
+      </div>
+
+      <nav class="footer-links" aria-label="Link-uri legale">
+        <a href='/bim'>Management BIM</a>
+        <a href='/harta-bim'>Harta BIM</a>
+        <a href='/politica-confidentialitate'>Confidentialitate</a>
+        <a href='/termeni-conditii'>Termeni si conditii</a>
+        <a href='/politica-cookies'>Cookies</a>
+        <a href="#setari-cookies" data-open-cookie-settings>Setari cookies</a>
+      </nav>
+    </div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/40745667495" aria-label="Contact WhatsApp">WA</a>
+
+  <div class="gdpr-banner" id="gdprBanner" role="dialog" aria-live="polite" aria-label="Preferinte cookies">
+    <div>
+      <h3>Confidentialitatea ta conteaza</h3>
+      <p>Folosim cookies necesare pentru functionarea site-ului si, doar cu acordul tau, cookies pentru analiza si marketing. Poti accepta toate cookies, le poti respinge pe cele optionale sau iti poti configura preferintele.</p>
+      <p><a href='/politica-cookies'>Citeste Politica cookies</a></p>
+    </div>
+    <div class="gdpr-actions">
+      <button class="btn btn-small btn-muted" type="button" id="openCookieSettings">Setari</button>
+      <button class="btn btn-small btn-muted" type="button" id="rejectCookies">Respinge optionale</button>
+      <button class="btn btn-small btn-dark" type="button" id="acceptCookies">Accepta toate</button>
+    </div>
+  </div>
+
+  <div class="gdpr-modal" id="gdprModal" role="dialog" aria-modal="true" aria-labelledby="gdprTitle">
+    <div class="gdpr-panel">
+      <div class="gdpr-panel-header">
+        <div>
+          <span class="eyebrow">GDPR</span>
+          <h2 id="gdprTitle">Setari cookies</h2>
+          <p>Alege ce categorii de cookies permiti. Cookies necesare sunt active permanent, deoarece site-ul nu poate functiona corect fara ele.</p>
+        </div>
+        <button class="gdpr-close" type="button" id="closeCookieSettings" aria-label="Inchide">×</button>
+      </div>
+
+      <div class="cookie-option">
+        <div>
+          <strong>Cookies necesare</strong>
+          <p>Asigura functionarea de baza a site-ului, securitatea si salvarea preferintelor tale.</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" checked disabled />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="cookie-option">
+        <div>
+          <strong>Cookies de analiza</strong>
+          <p>Ne ajuta sa intelegem cum este folosit site-ul, pentru a imbunatati continutul si experienta.</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="analyticsCookies" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="cookie-option">
+        <div>
+          <strong>Cookies de marketing</strong>
+          <p>Pot fi folosite pentru masurarea campaniilor si afisarea de continut relevant.</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="marketingCookies" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="gdpr-actions" style="margin-top: 22px;">
+        <button class="btn btn-small btn-muted" type="button" id="modalRejectCookies">Respinge optionale</button>
+        <button class="btn btn-small btn-dark" type="button" id="saveCookieSettings">Salveaza preferintele</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const STORAGE_KEY = 'conpro_cookie_consent_v1';
+      const banner = document.getElementById('gdprBanner');
+      const modal = document.getElementById('gdprModal');
+      const analytics = document.getElementById('analyticsCookies');
+      const marketing = document.getElementById('marketingCookies');
+
+      const savedConsent = localStorage.getItem(STORAGE_KEY);
+      if (!savedConsent) {
+        banner.classList.add('is-visible');
+      } else {
+        applyConsent(JSON.parse(savedConsent));
+      }
+
+      function saveConsent(consent) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({
+          necessary: true,
+          analytics: !!consent.analytics,
+          marketing: !!consent.marketing,
+          date: new Date().toISOString()
+        }));
+        banner.classList.remove('is-visible');
+        modal.classList.remove('is-visible');
+        applyConsent(consent);
+      }
+
+      function applyConsent(consent) {
+        if (window.conproApplyAnalyticsConsent) {
+          window.conproApplyAnalyticsConsent(consent);
+        }
+      }
+
+      function openModal() {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          analytics.checked = !!parsed.analytics;
+          marketing.checked = !!parsed.marketing;
+        }
+        modal.classList.add('is-visible');
+      }
+
+      document.getElementById('acceptCookies').addEventListener('click', function () {
+        saveConsent({ analytics: true, marketing: true });
+      });
+
+      document.getElementById('rejectCookies').addEventListener('click', function () {
+        saveConsent({ analytics: false, marketing: false });
+      });
+
+      document.getElementById('modalRejectCookies').addEventListener('click', function () {
+        analytics.checked = false;
+        marketing.checked = false;
+        saveConsent({ analytics: false, marketing: false });
+      });
+
+      document.getElementById('saveCookieSettings').addEventListener('click', function () {
+        saveConsent({ analytics: analytics.checked, marketing: marketing.checked });
+      });
+
+      document.getElementById('openCookieSettings').addEventListener('click', openModal);
+      document.querySelectorAll('[data-open-cookie-settings]').forEach(function (el) {
+        el.addEventListener('click', function (event) {
+          event.preventDefault();
+          openModal();
+        });
+      });
+      document.getElementById('closeCookieSettings').addEventListener('click', function () {
+        modal.classList.remove('is-visible');
+      });
+
+      modal.addEventListener('click', function (event) {
+        if (event.target === modal) {
+          modal.classList.remove('is-visible');
+        }
+      });
+    })();
+  </script>
+<!-- Buton WhatsApp flotant -->
+<a
+  href="https://wa.me/40745667495?text=Salut%2C%20am%20o%20întrebare%20despre..."
+  class="whatsapp-chat"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat pe WhatsApp"
+>
+  <!-- Icon WhatsApp (SVG) -->
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <path d="M19.11 17.57c-.29-.15-1.72-.85-1.98-.94-.27-.1-.46-.15-.65.15-.2.29-.75.94-.92 1.13-.17.2-.34.22-.63.08-.29-.15-1.22-.45-2.33-1.44-.86-.76-1.45-1.7-1.62-1.99-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.52.15-.17.2-.29.29-.48.1-.2.05-.37-.02-.52-.07-.15-.65-1.57-.89-2.14-.23-.56-.47-.48-.65-.48h-.56c-.2 0-.52.07-.79.37-.27.29-1.04 1.02-1.04 2.49s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.72-.7 1.97-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.2-.55-.35zM16 3.04c-7.16 0-12.96 5.8-12.96 12.96 0 2.29.6 4.46 1.66 6.33L3 29l6.86-1.8a12.9 12.9 0 0 0 6.14 1.56c7.16 0 12.96-5.8 12.96-12.96S23.16 3.04 16 3.04zm0 23.62c-2.2 0-4.24-.64-5.96-1.74l-.43-.27-4.06 1.06 1.09-3.95-.28-.44a10.73 10.73 0 0 1-1.68-5.79C4.68 8.91 9.79 3.8 16 3.8s11.32 5.11 11.32 11.32S22.21 26.66 16 26.66z"/>
+  </svg>
+</a>
+
+<style>
+  .whatsapp-chat{
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: 56px;
+    height: 56px;
+    border-radius: 9999px;
+    background: #25D366;
+    box-shadow: 0 8px 24px rgba(0,0,0,.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease, opacity .2s ease;
+  }
+  .whatsapp-chat:hover{
+    transform: scale(1.06);
+    box-shadow: 0 10px 28px rgba(0,0,0,.25);
+  }
+  .whatsapp-chat svg{
+    width: 28px;
+    height: 28px;
+    fill: #fff;
+    pointer-events: none;
+  }
+  /* Opțional: ascunde pe ecrane foarte mici după 480px înălțime */
+  @media (max-height: 480px){
+    .whatsapp-chat{ opacity: .9 }
+  }
+</style></body>
+</html>

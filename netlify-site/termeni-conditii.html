@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Termeni si conditii | Conpro Solutions</title>
+  <meta name="description" content="Reguli generale privind utilizarea site-ului Conpro Solutions si informatiile prezentate despre serviciile noastre." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+:root {
+  --primary: #0f172a;
+  --dark: #1e293b;
+  --muted: #64748b;
+  --light: #f8fafc;
+  --white: #ffffff;
+  --border: #e2e8f0;
+  --accent: #f97316;
+  --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  --radius: 16px;
+  --container: 960px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--primary);
+  background: var(--white);
+  line-height: 1.7;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  width: min(var(--container), calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  width: min(1200px, calc(100% - 48px));
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  letter-spacing: -0.04em;
+}
+
+.logo span { color: var(--accent); }
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-weight: 700;
+  color: var(--dark);
+  font-size: 15px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 22px;
+  border-radius: 10px;
+  font-weight: 800;
+  transition: 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.btn-dark {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.btn-dark:hover {
+  background: var(--dark);
+  transform: translateY(-2px);
+}
+
+.legal-hero {
+  background:
+    linear-gradient(90deg, rgba(15,23,42,0.95), rgba(15,23,42,0.76)),
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+  color: var(--white);
+  padding: 110px 0;
+}
+
+.eyebrow {
+  display: inline-flex;
+  color: var(--accent);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+h1, h2, h3 {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(36px, 4vw, 56px);
+  letter-spacing: -0.04em;
+  max-width: 760px;
+}
+
+.legal-hero p {
+  max-width: 680px;
+  color: #cbd5e1;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.legal-content {
+  padding: 90px 0;
+  background: var(--light);
+}
+
+.legal-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  padding: clamp(28px, 5vw, 56px);
+}
+
+.legal-card h2 {
+  font-size: 28px;
+  margin: 34px 0 14px;
+  letter-spacing: -0.03em;
+}
+
+.legal-card h2:first-child { margin-top: 0; }
+
+.legal-card p,
+.legal-card li {
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.legal-card ul {
+  padding-left: 22px;
+  margin-bottom: 18px;
+}
+
+.legal-card a {
+  color: var(--primary);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.notice {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  color: #9a3412;
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin-bottom: 28px;
+  font-weight: 700;
+}
+
+.footer {
+  padding: 42px 0;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  background: var(--primary);
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.footer .footer-inner {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  display: grid;
+  gap: 4px;
+}
+
+.footer-brand strong {
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  letter-spacing: -0.03em;
+}
+
+.footer-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: #e2e8f0;
+  font-weight: 700;
+  transition: 0.25s ease;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  background: var(--white);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 760px) {
+  .menu { display: none; }
+  .nav { height: 72px; }
+  .legal-hero { padding: 84px 0; }
+  .legal-content { padding: 60px 0; }
+  .footer .footer-inner { align-items: flex-start; flex-direction: column; }
+  .footer-links { justify-content: flex-start; }
+}
+
+    /* Conpro BIM: legătura spre aplicație, vizibilă și pe telefon */
+    .nav-app, .nav-app-mobil { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border: 2px solid var(--accent); border-radius: 999px; color: var(--primary); font-weight: 800; line-height: 1; white-space: nowrap; text-decoration: none; }
+    .nav-app::before, .nav-app-mobil::before { content: ""; width: 9px; height: 9px; background: var(--accent); border-radius: 2px; flex: none; }
+    .nav-app:hover, .nav-app-mobil:hover { background: var(--accent); color: #fff; }
+    .nav-app:hover::before, .nav-app-mobil:hover::before { background: #fff; }
+    .nav-app-mobil { display: none; }
+    @media (max-width: 760px) { .nav-app-mobil { display: inline-flex; min-height: 44px; padding: 10px 16px; font-size: 15px; } }
+    .logo { white-space: nowrap; }
+    @media (max-width: 640px) { .nav { gap: 12px; } .logo { font-size: 20px; } .nav-app-mobil { padding: 9px 12px; font-size: 14px; gap: 7px; } }
+    @media (max-width: 360px) { .logo { font-size: 17px; } .nav-app-mobil { padding: 9px 10px; font-size: 13px; } }
+  </style>
+  <script src="/js/ga-consent.js?v=20261110"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="nav">
+      <a href="/" class="logo">CON<span>PRO SOLUTIONS</span></a>
+      <nav class="menu" aria-label="Navigatie principala">
+        <a href="/">Acasa</a>
+        <a href="/#servicii">Servicii</a>
+        <a href="/#proces">Proces</a>
+        <a href="https://bim.conpro.ro" class="nav-app">Conpro BIM</a>
+        <a href="/#contact" class="btn btn-dark">Contact</a>
+      </nav>
+      <a href="https://bim.conpro.ro" class="nav-app-mobil">Conpro BIM</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="legal-hero">
+      <div class="container">
+        <span class="eyebrow">Conpro Solutions</span>
+        <h1>Termeni si conditii</h1>
+        <p>Reguli generale privind utilizarea site-ului Conpro Solutions si informatiile prezentate despre serviciile noastre.</p>
+      </div>
+    </section>
+
+    <section class="legal-content">
+      <div class="container">
+        <article class="legal-card">
+                   
+<h2>1. Acceptarea termenilor</h2>
+<p>Prin accesarea si utilizarea acestui site, acceptati termenii si conditiile prezentate in aceasta pagina.</p>
+
+<h2>2. Informatii despre servicii</h2>
+<p>Site-ul prezinta informatii generale despre serviciile Conpro Solutions in domeniul constructiilor, inclusiv servicii RTE autorizate ISC, consultanta tehnica si control al executiei lucrarilor.</p>
+
+<h2>3. Caracter informativ</h2>
+<p>Informatiile de pe site au caracter general si nu reprezinta consultanta tehnica personalizata pana la analiza documentatiei si stabilirea conditiilor concrete ale proiectului.</p>
+
+<h2>4. Solicitari si oferte</h2>
+<p>Trimiterea unei solicitari prin formular nu creeaza automat o relatie contractuala. O oferta sau colaborare se stabileste separat, in functie de proiect, disponibilitate si documentatia transmisa.</p>
+
+<h2>5. Drepturi de proprietate intelectuala</h2>
+<p>Textele, structura, elementele vizuale si materialele de pe site apartin Conpro Solutions sau sunt utilizate cu drept de folosinta. Copierea sau reutilizarea fara acord este interzisa.</p>
+
+<h2>6. Limitarea raspunderii</h2>
+<p>Conpro Solutions depune eforturi pentru ca informatiile publicate sa fie corecte, insa nu garanteaza ca site-ul este lipsit permanent de erori, intreruperi sau informatii care pot necesita actualizare.</p>
+
+<h2>7. Link-uri externe</h2>
+<p>Site-ul poate contine link-uri catre platforme externe, precum servicii de email, telefonie sau WhatsApp. Conpro Solutions nu controleaza continutul si politicile acestor platforme.</p>
+
+<h2>8. Modificari</h2>
+<p>Conpro Solutions poate actualiza acesti termeni periodic. Versiunea publicata pe site este cea aplicabila la momentul accesarii.</p>
+
+<h2>9. Contact</h2>
+<p>Pentru intrebari privind termenii si conditiile, ne poti contacta la: <a href="mailto:office@conpro.ro">office@conpro.ro</a>.</p>
+
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>Conpro Solutions</strong>
+        <span>© 2026 Conpro Solutions. Toate drepturile rezervate.</span>
+        <span>Servicii RTE autorizate ISC</span>
+      </div>
+
+      <nav class="footer-links" aria-label="Link-uri legale">
+        <a href='/politica-confidentialitate'>Confidentialitate</a>
+        <a href='/termeni-conditii'>Termeni si conditii</a>
+        <a href='/politica-cookies'>Cookies</a>
+      </nav>
+    </div>
+  </footer>
+<!-- Buton WhatsApp flotant -->
+<a
+  href="https://wa.me/40745667495?text=Salut%2C%20am%20o%20întrebare%20despre..."
+  class="whatsapp-chat"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat pe WhatsApp"
+>
+  <!-- Icon WhatsApp (SVG) -->
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <path d="M19.11 17.57c-.29-.15-1.72-.85-1.98-.94-.27-.1-.46-.15-.65.15-.2.29-.75.94-.92 1.13-.17.2-.34.22-.63.08-.29-.15-1.22-.45-2.33-1.44-.86-.76-1.45-1.7-1.62-1.99-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.52.15-.17.2-.29.29-.48.1-.2.05-.37-.02-.52-.07-.15-.65-1.57-.89-2.14-.23-.56-.47-.48-.65-.48h-.56c-.2 0-.52.07-.79.37-.27.29-1.04 1.02-1.04 2.49s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.72-.7 1.97-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.2-.55-.35zM16 3.04c-7.16 0-12.96 5.8-12.96 12.96 0 2.29.6 4.46 1.66 6.33L3 29l6.86-1.8a12.9 12.9 0 0 0 6.14 1.56c7.16 0 12.96-5.8 12.96-12.96S23.16 3.04 16 3.04zm0 23.62c-2.2 0-4.24-.64-5.96-1.74l-.43-.27-4.06 1.06 1.09-3.95-.28-.44a10.73 10.73 0 0 1-1.68-5.79C4.68 8.91 9.79 3.8 16 3.8s11.32 5.11 11.32 11.32S22.21 26.66 16 26.66z"/>
+  </svg>
+</a>
+
+<style>
+  .whatsapp-chat{
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: 56px;
+    height: 56px;
+    border-radius: 9999px;
+    background: #25D366;
+    box-shadow: 0 8px 24px rgba(0,0,0,.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease, opacity .2s ease;
+  }
+  .whatsapp-chat:hover{
+    transform: scale(1.06);
+    box-shadow: 0 10px 28px rgba(0,0,0,.25);
+  }
+  .whatsapp-chat svg{
+    width: 28px;
+    height: 28px;
+    fill: #fff;
+    pointer-events: none;
+  }
+  /* Opțional: ascunde pe ecrane foarte mici după 480px înălțime */
+  @media (max-height: 480px){
+    .whatsapp-chat{ opacity: .9 }
+  }
+</style></body>
+</html>
